@@ -201,8 +201,5 @@ def history_summary(history: List[Song]) -> Dict[str, int]:
     counts = {"Hype": 0, "Chill": 0, "Mixed": 0}
     for song in history:
         mood = song.get("mood", "Mixed")
-        if mood not in counts:
-            counts["Mixed"] += 1
-        else:
-            counts[mood] += 1
+        counts[mood] += 1
     return counts
